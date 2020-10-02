@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0048)https://web.cs.kent.edu/~dcoduto/Lab7/grade.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <title> Grade Calculator </title>
+        <link rel="stylesheet" href="./Grade Calculator_files/style.css">
+     <script type="text/javascript">
+        function calcuategrade() {
+        hwscore = document.getElementById("homeworkBox").value;
+        labscore = document.getElementById("labBox").value;
+        midtermscore = document.getElementById("midtermBox").value;
+        finalscore = document.getElementById("finalBox").value;
+        projectscore = document.getElementById("projectBox").value; 
+        attendancescore = document.getElementById("attendanceBox").value;
+        
+        finalGrade = (hwscore*0.15) + (labscore*0.20) + (midtermscore*0.20) + (finalscore*0.10) + (projectscore*0.30) + (attendancescore*0.05);
+        document.getElementById("outputDiv").innerHTML= finalGrade;
+        }
+     </script>
+   </head>
+
+  <body>
+    <p>
+      Homework: 
+          <input type="numeric" id="homeworkBox" size="10">
+      <br>
+      Labs: 
+          <input type="numeric" id="labBox" size="10">
+      <br>
+      Midterms: 
+          <input type="numeric" id="midtermBox" size="10">
+      <br>
+      Final: 
+          <input type="numeric" id="finalBox" size="10">
+      <br>
+      Project: 
+          <input type="numeric" id="projectBox" size="10">
+      <br>
+      Attendance: 
+          <input type="numeric" id="attendanceBox" size="10">
+    </p>
+    <input type="button" value="Calculate final grade" onclick="calcuategrade();" <hr="">
+    Your final grade is: <div id="outputDiv"></div>
+
+  
+
+</body></html>
